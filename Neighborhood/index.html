@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<style>
+.container { 
+  height: 200px;
+  position: relative;
+  border: 3px solid green; 
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="view_neighborhood.php">View Neighborhood</a>
+  <a href="search.php">Search Location</a>
+ 
+</div>
+ <div class="container">
+  <div class="center">
+<form method="post" enctype="multipart/form-data"  action="location.php">  
+    <input type="file" name="file" id="file" />  
+    <br /><br />
+     
+   
+   <button type="submit" name="upload">Upload selected files</button> 
+
+</form>
+  </div>
+</div>
+</body>
+</html>
