@@ -12,7 +12,7 @@ $longitude=[];
 
   $var_location = str_replace(' ', '+', $Location);
  	
-$url = "https://maps.googleapis.com/maps/api/geocode/json?address=$var_location&sensor=false&key=AIzaSyCgDHrXPSopLPEe4sxIZRtRXJ8t2ZQ0uVs";
+$url = "https://maps.googleapis.com/maps/api/geocode/json?address=$var_location&sensor=false&key=<Your API key>";
 
 
 $response = file_get_contents($url);
@@ -88,7 +88,7 @@ for ($i = 0; $i < count($latitude); $i++) {
     mkdir($dir,0777,true);
     chmod($dir,0777);
 }
-$image_url = "https://maps.googleapis.com/maps/api/streetview?size=2048x2048&location=$lati,$long&fov=90&heading=0&pitch=10&key=AIzaSyCgDHrXPSopLPEe4sxIZRtRXJ8t2ZQ0uVs";
+$image_url = "https://maps.googleapis.com/maps/api/streetview?size=2048x2048&location=$lati,$long&fov=90&heading=0&pitch=10&key=<Your API key>";
 
 $image = file_get_contents($image_url);
 if(strlen($image)==8836){
