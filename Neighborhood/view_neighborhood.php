@@ -3,7 +3,7 @@
   $var_location = $_GET['key'];
   $hj = "chilakaluripet";
   $var_location = str_replace(' ', '+', $var_location);
-$url = "https://maps.googleapis.com/maps/api/geocode/json?address=$var_location&sensor=false&key=AIzaSyCgDHrXPSopLPEe4sxIZRtRXJ8t2ZQ0uVs";
+$url = "https://maps.googleapis.com/maps/api/geocode/json?address=$var_location&sensor=false&key=<your API key>";
 
 
 $response = file_get_contents($url);
